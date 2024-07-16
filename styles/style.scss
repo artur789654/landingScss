@@ -25,6 +25,33 @@ body {
   background-color: #544cac;
   border: none;
   cursor: pointer;
+  transition: all 0.3s ease;
+  &:hover {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  }
+}
+@mixin card($w, $h, $mh) {
+  width: 100%;
+  height: $h;
+  max-width: $w;
+  max-height: $mh;
+  box-shadow: -1px 1px 20px 0px rgba(128, 128, 128, 0.1);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  &:hover {
+    box-shadow: 0px 12px 30px 0px rgba(71, 71, 71, 0.15);
+  }
+}
+@mixin cardIcon($w, $h, $br) {
+  max-width: $w;
+  max-height: $h;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $br;
 }
 h1 {
   font-size: 45px;
@@ -46,6 +73,12 @@ h3 {
 h4 {
   font-weight: 600;
   font-size: 16px;
+  line-height: 50px;
+  color: #323232;
+}
+h5 {
+  font-weight: 400;
+  font-size: 20px;
   line-height: 50px;
   color: #323232;
 }
@@ -187,10 +220,6 @@ header {
           @extend %btnColor;
           padding: 0.75rem 1.375rem;
           border-radius: 6px;
-          transition: all 0.3s ease;
-          &:hover {
-            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
-          }
         }
         a {
           display: flex;
@@ -324,8 +353,246 @@ header {
     }
   }
 }
+.whyChooseUs {
+  .container {
+    @extend %container;
+    padding: 7.5rem 0;
+    justify-content: center;
+    flex-direction: column;
+    .titleWhyUs {
+      text-align: center;
+      max-width: 543px;
+      width: 100%;
+      p {
+        padding-top: 1.25rem;
+        padding-bottom: 2.7rem;
+      }
+    }
+    .cardsWhyUs {
+      display: flex;
+      gap: 1.875rem;
+      .card-1 {
+        @include card(350px, 254px, 254px);
+        padding: 2.25rem;
+        .card-icon {
+          @include cardIcon(60px, 60px, 7px);
+          background-color: #6156dc;
+        }
+        h3 {
+          padding-top: 1.375rem;
+          padding-bottom: 1rem;
+        }
+      }
+      .card-2 {
+        @include card(350px, 254px, 254px);
+        padding: 2.25rem;
+        .card-icon {
+          @include cardIcon(60px, 60px, 7px);
+          background-color: #ef6010;
+        }
+        h3 {
+          padding-top: 1.375rem;
+          padding-bottom: 1rem;
+        }
+      }
+      .card-3 {
+        @include card(350px, 254px, 254px);
+        padding: 2.25rem;
+        .card-icon {
+          @include cardIcon(60px, 60px, 7px);
+          background-color: #a73eed;
+        }
+        h3 {
+          padding-top: 1.375rem;
+          padding-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+.featuredJobs {
+  overflow-x: hidden;
+  .container {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 543px;
+    width: 100%;
+    p {
+      padding-top: 1.25rem;
+    }
+  }
+  .cardsJobs {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 3.2rem;
+    .arrows {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      padding-left: 2rem;
+      cursor: pointer;
+      .disabled {
+        opacity: 0.5; /* Зменшуємо непрозорість */
+        pointer-events: none; /* Блокуємо події */
+      }
+      .arrow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 7px;
+        background-color: #f9faff;
+        border: none;
+        outline: none;
+        transition: all 0.3s ease;
+        svg {
+          path {
+            fill: #ef6010;
+          }
+        }
+        &:last-child {
+          transform: rotate(180deg);
+        }
+        &:hover {
+          background-color: #ef6010;
+          svg {
+            path {
+              fill: #fff;
+            }
+          }
+        }
+      }
+    }
+    .cardsjob-container {
+      padding-top: 5rem;
+      overflow-x: hidden;
+      width: 100%;
+      .wrap {
+        flex-wrap: wrap;
+      }
+      .cardsJob {
+        display: flex;
+        gap: 4rem;
+        transition: transform 0.5s ease;
+        .cardjob {
+          @include card(380px, 465px, 100%);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          min-width: 380px;
+          position: relative;
+          transition: all 0.3s ease;
+          &:hover {
+            transform: translateY(-35px);
+            button {
+              @extend %btnColor;
+            }
+          }
+          & > span {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            cursor: pointer;
+            // transition: all .3s ease;
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+          .cardjob-icon {
+            width: 83px;
+            height: 83px;
+            margin-top: 3rem;
+            background: #fea06b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            img {
+              object-fit: cover;
+              border-radius: 50%;
+            }
+          }
+          h5 {
+            padding-top: 1.75rem;
+          }
+          & > p {
+            color: #4238af;
+            padding-bottom: 2.75rem;
+          }
+        }
+        .salaryAndLocation {
+          display: flex;
+          flex-direction: column;
+          gap: 0.875rem;
+          .salary,
+          .location {
+            display: flex;
+            align-items: center;
+            gap: 0.625rem;
+            & > span {
+              display: flex;
+              align-items: center;
+            }
+            p {
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              span {
+                color: #323232;
+              }
+            }
+          }
+        }
+        .cardJobBtns {
+          display: flex;
+          gap: 1.75rem;
+          padding-top: 2rem;
+          .heart {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 49px;
+            height: 49px;
+            background-color: #f9faff;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            &:hover {
+              background-color: #ff5c00;
+              svg {
+                margin-top: 0.3rem;
+                margin-left: 0.1rem;
+                path {
+                  fill: #ffffff;
+                }
+              }
+            }
+          }
+          button {
+            @extend %btnColor;
+            background: #38318b54;
+            padding: 0.875rem 2.125rem;
+            border-radius: 47px;
+          }
+        }
+      }
+    }
+  }
+  .viewMore {
+    display: flex;
+    justify-content: center;
+    padding-top: 4.75rem;
+    .show-all {
+      @extend %btnColor;
+      padding: 0.875rem 2.125rem;
+      border-radius: 47px;
+    }
+  }
+}
 
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
   // header
   header .container {
     padding: 1rem;
@@ -356,6 +623,31 @@ header {
     display: block;
   }
   // header
+  // featuredJobs
+  .featuredJobs{
+      .cardsJobs{
+        flex-direction: column-reverse;
+        .arrows{
+          padding-left: 0;
+        }
+        .cardsjob-container{
+          .cardsJob.wrap{
+            justify-content: center;
+          }
+          .cardsJob{
+            margin:0 1rem;
+            gap: 2rem;
+            .cardjob{
+              width: 100%;
+              min-width: 280px;
+              max-width: 280px;
+
+            }
+          }
+        }
+      }
+  }
+  // featuredJobs
 }
 @media (max-width: 960px) {
   // header
@@ -405,7 +697,21 @@ header {
     }
   }
   //howItWorks
+  // whyChooseUs
+  .whyChooseUs {
+    .container {
+      .cardsWhyUs {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  }
+  // whyChooseUs
+  // featuredJobs
+
+  // featuredJobs
 }
+
 @media (max-width: 768px) {
   // banner
   .banner {
