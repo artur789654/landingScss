@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -28,6 +30,34 @@ body {
   transition: all 0.3s ease;
   &:hover {
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  }
+}
+%arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 7px;
+  background-color: #f9faff;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease;
+  svg {
+    path {
+      fill: #ef6010;
+    }
+  }
+  &:last-child {
+    transform: rotate(180deg);
+  }
+  &:hover {
+    background-color: #ef6010;
+    svg {
+      path {
+        fill: #fff;
+      }
+    }
   }
 }
 @mixin card($w, $h, $mh) {
@@ -433,36 +463,11 @@ header {
       padding-left: 2rem;
       cursor: pointer;
       .disabled {
-        opacity: 0.5; /* Зменшуємо непрозорість */
-        pointer-events: none; /* Блокуємо події */
+        opacity: 0.5;
+        pointer-events: none;
       }
       .arrow {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 60px;
-        height: 60px;
-        border-radius: 7px;
-        background-color: #f9faff;
-        border: none;
-        outline: none;
-        transition: all 0.3s ease;
-        svg {
-          path {
-            fill: #ef6010;
-          }
-        }
-        &:last-child {
-          transform: rotate(180deg);
-        }
-        &:hover {
-          background-color: #ef6010;
-          svg {
-            path {
-              fill: #fff;
-            }
-          }
-        }
+        @extend %arrow;
       }
     }
     .cardsjob-container {
@@ -591,6 +596,315 @@ header {
     }
   }
 }
+.ourCustomer {
+  padding-top: 7.5rem;
+  .container {
+    @extend %container;
+    flex-direction: column;
+    .titleCustomer {
+      margin: 0 auto;
+      text-align: center;
+      max-width: 543px;
+      width: 100%;
+      p {
+        padding-top: 1.25rem;
+        padding-bottom: 2.8rem;
+      }
+    }
+    .contentCustomer {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .iconCustomer {
+        max-width: 350px;
+        width: 100%;
+        max-height: 350px;
+        background-image: url("../images/customerBackgroundLeter.png"),
+          url("../images/customerBackgroundDots.png"),
+          url("../images/customerBackground.png");
+        background-position: top 10px left 58px, bottom 56px left 0px, top right;
+        background-size: auto, auto, cover;
+        background-repeat: no-repeat, no-repeat, no-repeat;
+
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+          border-bottom-left-radius: 170px;
+          border-bottom-right-radius: 170px;
+        }
+      }
+      .customerInfo {
+        max-width: 731px;
+        width: 100%;
+        & > h3 {
+          padding-top: 1.5rem;
+        }
+        & > p:first-of-type {
+          text-transform: uppercase;
+          padding-bottom: 0.5rem;
+        }
+        p:last-of-type {
+          color: #383838;
+        }
+        .customerRaiting {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          gap: 0.625rem;
+        }
+        .customerArowsAndViewers {
+          padding-top: 2.4rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .arrows {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+            .arrow {
+              @extend %arrow;
+              max-width: 41px;
+              max-height: 41px;
+            }
+          }
+          .customerViewers {
+            display: flex;
+            align-items: center;
+            div {
+              width: 53px;
+              height: 53px;
+              background: #ef6010;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 50%;
+              img {
+                border-radius: 50%;
+                object-fit: cover;
+              }
+              &:nth-of-type(1) {
+                transform: translateX(150%);
+              }
+              &:nth-of-type(2) {
+                transform: translateX(100%);
+                img {
+                  width: 80%;
+                  object-fit: cover;
+                }
+              }
+              &:nth-of-type(3) {
+                transform: translateX(50%);
+              }
+              &:nth-of-type(4) {
+                transform: translateX(0%);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.statistics {
+  margin-top: 7.4rem;
+  padding: 0 1rem;
+  .container {
+    @extend %container;
+    background-color: #ced5f4;
+    border-radius: 30px;
+    height: 229px;
+    justify-content: space-evenly;
+    div {
+      text-align: center;
+      h2 {
+        font-family: "Oswald", sans-serif;
+        color: #584ec6;
+      }
+      p {
+        padding-top: 0.5rem;
+        color: #fff;
+      }
+    }
+  }
+}
+.pricingPlan {
+  padding-top: 7rem;
+  .container {
+    @extend %container;
+    flex-direction: column;
+    .titlePricing {
+      margin: 0 auto;
+      text-align: center;
+      max-width: 543px;
+      width: 100%;
+      p{
+        padding-top: 1rem;
+      }
+    }
+    .cardsPricing {
+      padding-top: 4.7rem;
+      display: flex;
+      gap: 1.875rem;
+      transition: transform 0.3s ease;
+      .cardPricing {
+        @include card(350px, 537px, 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 350px;
+        transition: all 0.3s ease;
+        padding: 4rem;
+        & > h3 {
+          color: #4238af;
+          text-transform: uppercase;
+        }
+        & > h2 {
+          font-size: 45px;
+          line-height: 55px;
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+        }
+        &:hover {
+          transform: translateY(-30px);
+          .cardPricingBtn {
+            button {
+              background-color: #544cac;
+            }
+          }
+        }
+        .priceDescription {
+          padding-top: 4rem;
+          padding-bottom: 2.75rem;
+          display: flex;
+          flex-direction: column;
+          gap: 1.4rem;
+          div {
+            display: flex;
+            align-items: center;
+            gap: 0.675rem;
+            span {
+              display: flex;
+              align-items: center;
+            }
+          }
+        }
+        .cardPricingBtn {
+          button {
+            @extend %btnColor;
+            background: #38318b54;
+            padding: 0.875rem 2.125rem;
+            border-radius: 47px;
+          }
+        }
+      }
+    }
+  }
+}
+footer {
+  margin-top: 7.4rem;
+  padding-top: 6.875rem;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-color: #dbe2ff;
+  .container {
+    @extend %container;
+    flex-direction: column;
+    padding: 0 0.5rem;
+    .footerMenus {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .footerMenu {
+        & > h3 {
+          font-family: "Oswald", sans-serif;
+          font-size: 24px;
+          line-height: 26px;
+          font-weight: 400;
+          padding-bottom: 1rem;
+        }
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 0.8rem;
+          li {
+            transition: all 0.3s ease;
+            &:hover {
+              transform: scale(1.1);
+            }
+            a {
+              color: #717171;
+            }
+          }
+        }
+      }
+    }
+    .LogoAndNavigation {
+      margin-top: 5.625rem;
+      padding-top: 0.875rem;
+      padding-bottom: 0.875rem;
+      border-top: 2px solid #625bae;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      .footerLogo {
+        display: flex;
+      }
+      .footerBottomMenu {
+        ul {
+          display: flex;
+          gap: 4rem;
+          li {
+            transition: all 0.3s ease;
+            &:hover {
+              transform: scale(1.1);
+            }
+            a {
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 26px;
+              color: #3a2e5c;
+            }
+          }
+        }
+      }
+      .socialLinks {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        div {
+          width: 28px;
+          height: 28px;
+          border-radius: 50%;
+          background-color: #fff;
+          &:hover {
+            background-color: #4238afcf;
+            a {
+              span {
+                path {
+                  fill: #fff;
+                }
+              }
+            }
+          }
+          a {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            span {
+              path {
+                fill: #979797;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 @media (max-width: 1024px) {
   // header
@@ -624,30 +938,64 @@ header {
   }
   // header
   // featuredJobs
-  .featuredJobs{
-      .cardsJobs{
-        flex-direction: column-reverse;
-        .arrows{
-          padding-left: 0;
+  .featuredJobs {
+    .cardsJobs {
+      flex-direction: column-reverse;
+      .arrows {
+        padding-left: 0;
+      }
+      .cardsjob-container {
+        .cardsJob.wrap {
+          justify-content: center;
         }
-        .cardsjob-container{
-          .cardsJob.wrap{
-            justify-content: center;
-          }
-          .cardsJob{
-            margin:0 1rem;
-            gap: 2rem;
-            .cardjob{
-              width: 100%;
-              min-width: 280px;
-              max-width: 280px;
-
-            }
+        .cardsJob {
+          margin: 0 1rem;
+          gap: 2rem;
+          .cardjob {
+            width: 100%;
+            min-width: 280px;
+            max-width: 280px;
           }
         }
       }
+    }
   }
   // featuredJobs
+  // ourCustomer
+  .ourCustomer {
+    .container {
+      padding: 0 1rem;
+      .contentCustomer {
+        gap: 1rem;
+      }
+    }
+  }
+  // ourCustomer
+  // pricingPlan
+  .pricingPlan {
+    padding: 7rem 1rem;
+    .container {
+      .cardsPricing {
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+    }
+  }
+  // pricingPlan
+  // footer
+  footer {
+    .container {
+      padding: 0 1rem;
+      .LogoAndNavigation {
+        .footerBottomMenu {
+          ul {
+            gap: 2rem;
+          }
+        }
+      }
+    }
+  }
+  // footer
 }
 @media (max-width: 960px) {
   // header
@@ -707,9 +1055,20 @@ header {
     }
   }
   // whyChooseUs
-  // featuredJobs
-
-  // featuredJobs
+  // footer
+  footer {
+    .container {
+      .footerMenus {
+        gap: 3rem;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      .LogoAndNavigation {
+        margin-top: 2rem;
+      }
+    }
+  }
+  // footer
 }
 
 @media (max-width: 768px) {
@@ -751,6 +1110,30 @@ header {
     }
   }
   //howItWorks
+  // ourCustomer
+  .ourCustomer {
+    .container {
+      .contentCustomer {
+        flex-direction: column;
+      }
+    }
+  }
+  // ourCustomer
+  // footer
+  footer {
+    .container {
+      .LogoAndNavigation {
+        flex-direction: column;
+        gap: 2rem;
+        .footerBottomMenu {
+          ul {
+            gap: 1rem;
+          }
+        }
+      }
+    }
+  }
+  // footer
 }
 @media (max-width: 480px) {
   // header
@@ -769,4 +1152,39 @@ header {
     }
   }
   // companies
+  // statistics
+  .statistics {
+    .container {
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 2rem;
+      height: 100%;
+    }
+  }
+  // statistics
+  // pricingPlan
+  .pricingPlan {
+    .container {
+      .cardsPricing {
+        .cardPricing {
+          padding: 2rem;
+          min-width: 200px;
+        }
+      }
+    }
+  }
+  // pricingPlan
+  // footer
+  footer {
+    .container {
+      .LogoAndNavigation {
+        .footerBottomMenu {
+          ul {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+  // footer
 }

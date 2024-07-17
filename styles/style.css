@@ -1,5 +1,5 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
 * {
   box-sizing: border-box;
   padding: 0;
@@ -12,7 +12,7 @@ body {
   font-size: 16px;
 }
 
-.whyChooseUs .container, .howItWorks .container, .companies .container, .banner .container, header .container {
+footer .container, .pricingPlan .container, .statistics .container, .ourCustomer .container, .whyChooseUs .container, .howItWorks .container, .companies .container, .banner .container, header .container {
   width: 100%;
   max-width: 1110px;
   margin: 0 auto;
@@ -25,15 +25,40 @@ h2, h1 {
   color: #353434;
 }
 
-.featuredJobs .viewMore .show-all, .featuredJobs .cardsJobs .cardsjob-container .cardsJob .cardJobBtns button, .featuredJobs .cardsJobs .cardsjob-container .cardsJob .cardjob:hover button, .banner .container .main-content .btnAndLink .btn {
+.pricingPlan .container .cardsPricing .cardPricing .cardPricingBtn button, .featuredJobs .viewMore .show-all, .featuredJobs .cardsJobs .cardsjob-container .cardsJob .cardJobBtns button, .featuredJobs .cardsJobs .cardsjob-container .cardsJob .cardjob:hover button, .banner .container .main-content .btnAndLink .btn {
   color: #fff;
   background-color: #544cac;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.featuredJobs .viewMore .show-all:hover, .featuredJobs .cardsJobs .cardsjob-container .cardsJob .cardJobBtns button:hover, .featuredJobs .cardsJobs .cardsjob-container .cardsJob .cardjob:hover button:hover, .banner .container .main-content .btnAndLink .btn:hover {
+.pricingPlan .container .cardsPricing .cardPricing .cardPricingBtn button:hover, .featuredJobs .viewMore .show-all:hover, .featuredJobs .cardsJobs .cardsjob-container .cardsJob .cardJobBtns button:hover, .featuredJobs .cardsJobs .cardsjob-container .cardsJob .cardjob:hover button:hover, .banner .container .main-content .btnAndLink .btn:hover {
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.ourCustomer .container .contentCustomer .customerInfo .customerArowsAndViewers .arrows .arrow, .featuredJobs .cardsJobs .arrows .arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 7px;
+  background-color: #f9faff;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.ourCustomer .container .contentCustomer .customerInfo .customerArowsAndViewers .arrows .arrow svg path, .featuredJobs .cardsJobs .arrows .arrow svg path {
+  fill: #ef6010;
+}
+.ourCustomer .container .contentCustomer .customerInfo .customerArowsAndViewers .arrows .arrow:last-child, .featuredJobs .cardsJobs .arrows .arrow:last-child {
+  transform: rotate(180deg);
+}
+.ourCustomer .container .contentCustomer .customerInfo .customerArowsAndViewers .arrows .arrow:hover, .featuredJobs .cardsJobs .arrows .arrow:hover {
+  background-color: #ef6010;
+}
+.ourCustomer .container .contentCustomer .customerInfo .customerArowsAndViewers .arrows .arrow:hover svg path, .featuredJobs .cardsJobs .arrows .arrow:hover svg path {
+  fill: #fff;
 }
 
 h1 {
@@ -453,32 +478,8 @@ header .auth-buttons a:hover {
   cursor: pointer;
 }
 .featuredJobs .cardsJobs .arrows .disabled {
-  opacity: 0.5; /* Зменшуємо непрозорість */
-  pointer-events: none; /* Блокуємо події */
-}
-.featuredJobs .cardsJobs .arrows .arrow {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 60px;
-  height: 60px;
-  border-radius: 7px;
-  background-color: #f9faff;
-  border: none;
-  outline: none;
-  transition: all 0.3s ease;
-}
-.featuredJobs .cardsJobs .arrows .arrow svg path {
-  fill: #ef6010;
-}
-.featuredJobs .cardsJobs .arrows .arrow:last-child {
-  transform: rotate(180deg);
-}
-.featuredJobs .cardsJobs .arrows .arrow:hover {
-  background-color: #ef6010;
-}
-.featuredJobs .cardsJobs .arrows .arrow:hover svg path {
-  fill: #fff;
+  opacity: 0.5;
+  pointer-events: none;
 }
 .featuredJobs .cardsJobs .cardsjob-container {
   padding-top: 5rem;
@@ -612,6 +613,308 @@ header .auth-buttons a:hover {
   border-radius: 47px;
 }
 
+.ourCustomer {
+  padding-top: 7.5rem;
+}
+.ourCustomer .container {
+  flex-direction: column;
+}
+.ourCustomer .container .titleCustomer {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 543px;
+  width: 100%;
+}
+.ourCustomer .container .titleCustomer p {
+  padding-top: 1.25rem;
+  padding-bottom: 2.8rem;
+}
+.ourCustomer .container .contentCustomer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.ourCustomer .container .contentCustomer .iconCustomer {
+  max-width: 350px;
+  width: 100%;
+  max-height: 350px;
+  background-image: url("../images/customerBackgroundLeter.png"), url("../images/customerBackgroundDots.png"), url("../images/customerBackground.png");
+  background-position: top 10px left 58px, bottom 56px left 0px, top right;
+  background-size: auto, auto, cover;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+}
+.ourCustomer .container .contentCustomer .iconCustomer img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-bottom-left-radius: 170px;
+  border-bottom-right-radius: 170px;
+}
+.ourCustomer .container .contentCustomer .customerInfo {
+  max-width: 731px;
+  width: 100%;
+}
+.ourCustomer .container .contentCustomer .customerInfo > h3 {
+  padding-top: 1.5rem;
+}
+.ourCustomer .container .contentCustomer .customerInfo > p:first-of-type {
+  text-transform: uppercase;
+  padding-bottom: 0.5rem;
+}
+.ourCustomer .container .contentCustomer .customerInfo p:last-of-type {
+  color: #383838;
+}
+.ourCustomer .container .contentCustomer .customerInfo .customerRaiting {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.625rem;
+}
+.ourCustomer .container .contentCustomer .customerInfo .customerArowsAndViewers {
+  padding-top: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ourCustomer .container .contentCustomer .customerInfo .customerArowsAndViewers .arrows {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+.ourCustomer .container .contentCustomer .customerInfo .customerArowsAndViewers .arrows .arrow {
+  max-width: 41px;
+  max-height: 41px;
+}
+.ourCustomer .container .contentCustomer .customerInfo .customerArowsAndViewers .customerViewers {
+  display: flex;
+  align-items: center;
+}
+.ourCustomer .container .contentCustomer .customerInfo .customerArowsAndViewers .customerViewers div {
+  width: 53px;
+  height: 53px;
+  background: #ef6010;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.ourCustomer .container .contentCustomer .customerInfo .customerArowsAndViewers .customerViewers div img {
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.ourCustomer .container .contentCustomer .customerInfo .customerArowsAndViewers .customerViewers div:nth-of-type(1) {
+  transform: translateX(150%);
+}
+.ourCustomer .container .contentCustomer .customerInfo .customerArowsAndViewers .customerViewers div:nth-of-type(2) {
+  transform: translateX(100%);
+}
+.ourCustomer .container .contentCustomer .customerInfo .customerArowsAndViewers .customerViewers div:nth-of-type(2) img {
+  width: 80%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.ourCustomer .container .contentCustomer .customerInfo .customerArowsAndViewers .customerViewers div:nth-of-type(3) {
+  transform: translateX(50%);
+}
+.ourCustomer .container .contentCustomer .customerInfo .customerArowsAndViewers .customerViewers div:nth-of-type(4) {
+  transform: translateX(0%);
+}
+
+.statistics {
+  margin-top: 7.4rem;
+  padding: 0 1rem;
+}
+.statistics .container {
+  background-color: #ced5f4;
+  border-radius: 30px;
+  height: 229px;
+  justify-content: space-evenly;
+}
+.statistics .container div {
+  text-align: center;
+}
+.statistics .container div h2 {
+  font-family: "Oswald", sans-serif;
+  color: #584ec6;
+}
+.statistics .container div p {
+  padding-top: 0.5rem;
+  color: #fff;
+}
+
+.pricingPlan {
+  padding-top: 7rem;
+}
+.pricingPlan .container {
+  flex-direction: column;
+}
+.pricingPlan .container .titlePricing {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 543px;
+  width: 100%;
+}
+.pricingPlan .container .titlePricing p {
+  padding-top: 1rem;
+}
+.pricingPlan .container .cardsPricing {
+  padding-top: 4.7rem;
+  display: flex;
+  gap: 1.875rem;
+  transition: transform 0.3s ease;
+}
+.pricingPlan .container .cardsPricing .cardPricing {
+  width: 100%;
+  height: 537px;
+  max-width: 350px;
+  max-height: 100%;
+  box-shadow: -1px 1px 20px 0px rgba(128, 128, 128, 0.1);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 350px;
+  transition: all 0.3s ease;
+  padding: 4rem;
+}
+.pricingPlan .container .cardsPricing .cardPricing:hover {
+  box-shadow: 0px 12px 30px 0px rgba(71, 71, 71, 0.15);
+}
+.pricingPlan .container .cardsPricing .cardPricing > h3 {
+  color: #4238af;
+  text-transform: uppercase;
+}
+.pricingPlan .container .cardsPricing .cardPricing > h2 {
+  font-size: 45px;
+  line-height: 55px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.pricingPlan .container .cardsPricing .cardPricing:hover {
+  transform: translateY(-30px);
+}
+.pricingPlan .container .cardsPricing .cardPricing:hover .cardPricingBtn button {
+  background-color: #544cac;
+}
+.pricingPlan .container .cardsPricing .cardPricing .priceDescription {
+  padding-top: 4rem;
+  padding-bottom: 2.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+.pricingPlan .container .cardsPricing .cardPricing .priceDescription div {
+  display: flex;
+  align-items: center;
+  gap: 0.675rem;
+}
+.pricingPlan .container .cardsPricing .cardPricing .priceDescription div span {
+  display: flex;
+  align-items: center;
+}
+.pricingPlan .container .cardsPricing .cardPricing .cardPricingBtn button {
+  background: rgba(56, 49, 139, 0.3294117647);
+  padding: 0.875rem 2.125rem;
+  border-radius: 47px;
+}
+
+footer {
+  margin-top: 7.4rem;
+  padding-top: 6.875rem;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-color: #dbe2ff;
+}
+footer .container {
+  flex-direction: column;
+  padding: 0 0.5rem;
+}
+footer .container .footerMenus {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .container .footerMenus .footerMenu > h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 400;
+  padding-bottom: 1rem;
+}
+footer .container .footerMenus .footerMenu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+footer .container .footerMenus .footerMenu ul li {
+  transition: all 0.3s ease;
+}
+footer .container .footerMenus .footerMenu ul li:hover {
+  transform: scale(1.1);
+}
+footer .container .footerMenus .footerMenu ul li a {
+  color: #717171;
+}
+footer .container .LogoAndNavigation {
+  margin-top: 5.625rem;
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem;
+  border-top: 2px solid #625bae;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+footer .container .LogoAndNavigation .footerLogo {
+  display: flex;
+}
+footer .container .LogoAndNavigation .footerBottomMenu ul {
+  display: flex;
+  gap: 4rem;
+}
+footer .container .LogoAndNavigation .footerBottomMenu ul li {
+  transition: all 0.3s ease;
+}
+footer .container .LogoAndNavigation .footerBottomMenu ul li:hover {
+  transform: scale(1.1);
+}
+footer .container .LogoAndNavigation .footerBottomMenu ul li a {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 26px;
+  color: #3a2e5c;
+}
+footer .container .LogoAndNavigation .socialLinks {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+footer .container .LogoAndNavigation .socialLinks div {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+footer .container .LogoAndNavigation .socialLinks div:hover {
+  background-color: rgba(66, 56, 175, 0.8117647059);
+}
+footer .container .LogoAndNavigation .socialLinks div:hover a span path {
+  fill: #fff;
+}
+footer .container .LogoAndNavigation .socialLinks div a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .container .LogoAndNavigation .socialLinks div a span path {
+  fill: #979797;
+}
+
 @media (max-width: 1024px) {
   header .container {
     padding: 1rem;
@@ -656,6 +959,25 @@ header .auth-buttons a:hover {
     min-width: 280px;
     max-width: 280px;
   }
+  .ourCustomer .container {
+    padding: 0 1rem;
+  }
+  .ourCustomer .container .contentCustomer {
+    gap: 1rem;
+  }
+  .pricingPlan {
+    padding: 7rem 1rem;
+  }
+  .pricingPlan .container .cardsPricing {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  footer .container {
+    padding: 0 1rem;
+  }
+  footer .container .LogoAndNavigation .footerBottomMenu ul {
+    gap: 2rem;
+  }
 }
 @media (max-width: 960px) {
   .nav ~ .auth-buttons {
@@ -694,6 +1016,14 @@ header .auth-buttons a:hover {
     flex-wrap: wrap;
     justify-content: center;
   }
+  footer .container .footerMenus {
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  footer .container .LogoAndNavigation {
+    margin-top: 2rem;
+  }
 }
 @media (max-width: 768px) {
   .banner .container .banner-img {
@@ -721,6 +1051,16 @@ header .auth-buttons a:hover {
     max-height: 500px;
     height: 100%;
   }
+  .ourCustomer .container .contentCustomer {
+    flex-direction: column;
+  }
+  footer .container .LogoAndNavigation {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  footer .container .LogoAndNavigation .footerBottomMenu ul {
+    gap: 1rem;
+  }
 }
 @media (max-width: 480px) {
   header .header-icon {
@@ -734,5 +1074,18 @@ header .auth-buttons a:hover {
   .companies .container {
     justify-content: center;
     gap: 3rem;
+  }
+  .statistics .container {
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    height: 100%;
+  }
+  .pricingPlan .container .cardsPricing .cardPricing {
+    padding: 2rem;
+    min-width: 200px;
+  }
+  footer .container .LogoAndNavigation .footerBottomMenu ul {
+    flex-direction: column;
   }
 }/*# sourceMappingURL=style.css.map */
