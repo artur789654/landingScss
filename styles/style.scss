@@ -130,6 +130,9 @@ a {
 li {
   list-style: none;
 }
+img {
+  object-fit: cover;
+}
 header {
   background-color: #f5f7ff;
   padding-top: 23px;
@@ -150,7 +153,8 @@ header {
   .container {
     @extend %container;
   }
-  .logo svg {
+  .logo img {
+    object-fit: cover;
     width: 100%;
     max-height: 46px;
   }
@@ -242,7 +246,7 @@ header {
         margin-top: 1rem;
         margin-bottom: 2rem;
       }
-      .btnAndLink {
+      .btn-and-link {
         display: flex;
         align-items: center;
         gap: 2.125rem;
@@ -281,7 +285,7 @@ header {
     gap: 2rem;
   }
 }
-.howItWorks {
+.how-it-works {
   .container {
     @extend %container;
     align-items: flex-end;
@@ -301,24 +305,23 @@ header {
         ~ .profile
         label
         span
-        svg {
+        img {
         transform: rotate(180deg);
       }
       input[type="checkbox"]#more_about_vacancies:checked
         ~ .vacancies
         label
         span
-        svg {
+        img {
         transform: rotate(180deg);
       }
-      input[type="checkbox"]#more_about_job:checked ~ .job label span svg {
+      input[type="checkbox"]#more_about_job:checked ~ .job label span img {
         transform: rotate(180deg);
       }
       input[type="checkbox"]:not(:checked) + .profile,
       .vacancies,
       .job {
         height: 58px;
-        // max-height: 58px;
       }
       input[type="checkbox"]:checked + .profile {
         height: 247px;
@@ -333,7 +336,7 @@ header {
         background-color: #f5f7ff;
         border-radius: 8px;
         transition: all 0.3s ease;
-        overflow: hidden; //під питанням?
+        overflow: hidden;
         label {
           display: flex;
           align-items: center;
@@ -358,7 +361,7 @@ header {
             &:hover {
               cursor: pointer;
             }
-            svg {
+            img {
               transition: all 0.3s ease;
             }
           }
@@ -383,13 +386,13 @@ header {
     }
   }
 }
-.whyChooseUs {
+.why-choose-us {
   .container {
     @extend %container;
     padding: 7.5rem 0;
     justify-content: center;
     flex-direction: column;
-    .titleWhyUs {
+    .title-why-us {
       text-align: center;
       max-width: 543px;
       width: 100%;
@@ -398,7 +401,7 @@ header {
         padding-bottom: 2.7rem;
       }
     }
-    .cardsWhyUs {
+    .cards-why-us {
       display: flex;
       gap: 1.875rem;
       .card-1 {
@@ -440,7 +443,7 @@ header {
     }
   }
 }
-.featuredJobs {
+.featured-jobs {
   overflow-x: hidden;
   .container {
     margin: 0 auto;
@@ -451,7 +454,7 @@ header {
       padding-top: 1.25rem;
     }
   }
-  .cardsJobs {
+  .cards-jobs {
     display: flex;
     align-items: center;
     justify-content: start;
@@ -470,18 +473,18 @@ header {
         @extend %arrow;
       }
     }
-    .cardsjob-container {
+    .cards-job-container {
       padding-top: 5rem;
       overflow-x: hidden;
       width: 100%;
       .wrap {
         flex-wrap: wrap;
       }
-      .cardsJob {
+      .cards-job {
         display: flex;
         gap: 4rem;
         transition: transform 0.5s ease;
-        .cardjob {
+        .card-job {
           @include card(380px, 465px, 100%);
           display: flex;
           flex-direction: column;
@@ -500,12 +503,12 @@ header {
             top: 2rem;
             right: 2rem;
             cursor: pointer;
-            // transition: all .3s ease;
+            transition: all 0.3s ease;
             &:hover {
               transform: scale(1.1);
             }
           }
-          .cardjob-icon {
+          .card-job-icon {
             width: 83px;
             height: 83px;
             margin-top: 3rem;
@@ -527,7 +530,7 @@ header {
             padding-bottom: 2.75rem;
           }
         }
-        .salaryAndLocation {
+        .salary-and-location {
           display: flex;
           flex-direction: column;
           gap: 0.875rem;
@@ -550,7 +553,7 @@ header {
             }
           }
         }
-        .cardJobBtns {
+        .card-job-btns {
           display: flex;
           gap: 1.75rem;
           padding-top: 2rem;
@@ -585,7 +588,7 @@ header {
       }
     }
   }
-  .viewMore {
+  .view-more {
     display: flex;
     justify-content: center;
     padding-top: 4.75rem;
@@ -596,12 +599,12 @@ header {
     }
   }
 }
-.ourCustomer {
+.our-customer {
   padding-top: 7.5rem;
   .container {
     @extend %container;
     flex-direction: column;
-    .titleCustomer {
+    .title-customer {
       margin: 0 auto;
       text-align: center;
       max-width: 543px;
@@ -611,11 +614,11 @@ header {
         padding-bottom: 2.8rem;
       }
     }
-    .contentCustomer {
+    .content-customer {
       width: 100%;
       display: flex;
       justify-content: space-between;
-      .iconCustomer {
+      .icon-customer {
         max-width: 350px;
         width: 100%;
         max-height: 350px;
@@ -634,7 +637,7 @@ header {
           border-bottom-right-radius: 170px;
         }
       }
-      .customerInfo {
+      .customer-info {
         max-width: 731px;
         width: 100%;
         & > h3 {
@@ -647,13 +650,13 @@ header {
         p:last-of-type {
           color: #383838;
         }
-        .customerRaiting {
+        .customer-raiting {
           display: flex;
           justify-content: flex-end;
           align-items: center;
           gap: 0.625rem;
         }
-        .customerArowsAndViewers {
+        .customer-arrows-viewers {
           padding-top: 2.4rem;
           display: flex;
           align-items: center;
@@ -668,7 +671,7 @@ header {
               max-height: 41px;
             }
           }
-          .customerViewers {
+          .customer-viewers {
             display: flex;
             align-items: center;
             div {
@@ -728,26 +731,26 @@ header {
     }
   }
 }
-.pricingPlan {
+.pricing-plan {
   padding-top: 7rem;
   .container {
     @extend %container;
     flex-direction: column;
-    .titlePricing {
+    .title-pricing {
       margin: 0 auto;
       text-align: center;
       max-width: 543px;
       width: 100%;
-      p{
+      p {
         padding-top: 1rem;
       }
     }
-    .cardsPricing {
+    .cards-pricing {
       padding-top: 4.7rem;
       display: flex;
       gap: 1.875rem;
       transition: transform 0.3s ease;
-      .cardPricing {
+      .card-pricing {
         @include card(350px, 537px, 100%);
         display: flex;
         flex-direction: column;
@@ -767,13 +770,13 @@ header {
         }
         &:hover {
           transform: translateY(-30px);
-          .cardPricingBtn {
+          .card-pricing-btn {
             button {
               background-color: #544cac;
             }
           }
         }
-        .priceDescription {
+        .price-description {
           padding-top: 4rem;
           padding-bottom: 2.75rem;
           display: flex;
@@ -789,7 +792,7 @@ header {
             }
           }
         }
-        .cardPricingBtn {
+        .card-pricing-btn {
           button {
             @extend %btnColor;
             background: #38318b54;
@@ -811,11 +814,11 @@ footer {
     @extend %container;
     flex-direction: column;
     padding: 0 0.5rem;
-    .footerMenus {
+    .footer-menus {
       width: 100%;
       display: flex;
       justify-content: space-between;
-      .footerMenu {
+      .footer-menu {
         & > h3 {
           font-family: "Oswald", sans-serif;
           font-size: 24px;
@@ -839,7 +842,7 @@ footer {
         }
       }
     }
-    .LogoAndNavigation {
+    .logo-navigation {
       margin-top: 5.625rem;
       padding-top: 0.875rem;
       padding-bottom: 0.875rem;
@@ -848,10 +851,10 @@ footer {
       justify-content: space-between;
       align-items: center;
       width: 100%;
-      .footerLogo {
+      .footer-logo {
         display: flex;
       }
-      .footerBottomMenu {
+      .footer-bottom-menu {
         ul {
           display: flex;
           gap: 4rem;
@@ -869,7 +872,7 @@ footer {
           }
         }
       }
-      .socialLinks {
+      .social-links {
         display: flex;
         align-items: center;
         gap: 0.5rem;
@@ -937,21 +940,21 @@ footer {
     display: block;
   }
   // header
-  // featuredJobs
-  .featuredJobs {
-    .cardsJobs {
+  // featured-jobs
+  .featured-jobs {
+    .cards-jobs {
       flex-direction: column-reverse;
       .arrows {
         padding-left: 0;
       }
-      .cardsjob-container {
-        .cardsJob.wrap {
+      .cards-job-container {
+        .cards-job.wrap {
           justify-content: center;
         }
-        .cardsJob {
+        .cards-job {
           margin: 0 1rem;
           gap: 2rem;
-          .cardjob {
+          .card-job {
             width: 100%;
             min-width: 280px;
             max-width: 280px;
@@ -960,34 +963,34 @@ footer {
       }
     }
   }
-  // featuredJobs
-  // ourCustomer
-  .ourCustomer {
+  // featured-jobs
+  // our-customer
+  .our-customer {
     .container {
       padding: 0 1rem;
-      .contentCustomer {
+      .content-customer {
         gap: 1rem;
       }
     }
   }
-  // ourCustomer
-  // pricingPlan
-  .pricingPlan {
+  // our-customer
+  // pricing-plan
+  .pricing-plan {
     padding: 7rem 1rem;
     .container {
-      .cardsPricing {
+      .cards-pricing {
         flex-wrap: wrap;
         justify-content: space-around;
       }
     }
   }
-  // pricingPlan
+  // pricing-plan
   // footer
   footer {
     .container {
       padding: 0 1rem;
-      .LogoAndNavigation {
-        .footerBottomMenu {
+      .logo-navigation {
+        .footer-bottom-menu {
           ul {
             gap: 2rem;
           }
@@ -995,7 +998,6 @@ footer {
       }
     }
   }
-  // footer
 }
 @media (max-width: 960px) {
   // header
@@ -1033,7 +1035,7 @@ footer {
   }
   // companies
   //howItWorks
-  .howItWorks {
+  .how-it-works {
     .container {
       flex-direction: column;
       align-items: center;
@@ -1046,9 +1048,9 @@ footer {
   }
   //howItWorks
   // whyChooseUs
-  .whyChooseUs {
+  .why-choose-us {
     .container {
-      .cardsWhyUs {
+      .cards-why-us {
         flex-wrap: wrap;
         justify-content: center;
       }
@@ -1058,17 +1060,16 @@ footer {
   // footer
   footer {
     .container {
-      .footerMenus {
+      .footer-menus {
         gap: 3rem;
         flex-wrap: wrap;
         justify-content: space-around;
       }
-      .LogoAndNavigation {
+      .logo-navigation {
         margin-top: 2rem;
       }
     }
   }
-  // footer
 }
 
 @media (max-width: 768px) {
@@ -1086,7 +1087,7 @@ footer {
   }
   // banner
   //howItWorks
-  .howItWorks {
+  .how-it-works {
     .container {
       .content {
         input[type="checkbox"]:not(:checked) + .profile,
@@ -1110,22 +1111,22 @@ footer {
     }
   }
   //howItWorks
-  // ourCustomer
-  .ourCustomer {
+  // our-customer
+  .our-customer {
     .container {
-      .contentCustomer {
+      .content-customer {
         flex-direction: column;
       }
     }
   }
-  // ourCustomer
+  // our-customer
   // footer
   footer {
     .container {
-      .LogoAndNavigation {
+      .logo-navigation {
         flex-direction: column;
         gap: 2rem;
-        .footerBottomMenu {
+        .footer-bottom-menu {
           ul {
             gap: 1rem;
           }
@@ -1133,7 +1134,6 @@ footer {
       }
     }
   }
-  // footer
 }
 @media (max-width: 480px) {
   // header
@@ -1162,23 +1162,23 @@ footer {
     }
   }
   // statistics
-  // pricingPlan
-  .pricingPlan {
+  // pricing-plan
+  .pricing-plan {
     .container {
-      .cardsPricing {
-        .cardPricing {
+      .cards-pricing {
+        .card-pricing {
           padding: 2rem;
           min-width: 200px;
         }
       }
     }
   }
-  // pricingPlan
+  // pricing-plan
   // footer
   footer {
     .container {
-      .LogoAndNavigation {
-        .footerBottomMenu {
+      .logo-navigation {
+        .footer-bottom-menu {
           ul {
             flex-direction: column;
           }
@@ -1186,5 +1186,4 @@ footer {
       }
     }
   }
-  // footer
 }

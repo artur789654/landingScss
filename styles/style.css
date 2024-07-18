@@ -12,7 +12,7 @@ body {
   font-size: 16px;
 }
 
-footer .container, .pricingPlan .container, .statistics .container, .ourCustomer .container, .whyChooseUs .container, .howItWorks .container, .companies .container, .banner .container, header .container {
+footer .container, .pricing-plan .container, .statistics .container, .our-customer .container, .why-choose-us .container, .how-it-works .container, .companies .container, .banner .container, header .container {
   width: 100%;
   max-width: 1110px;
   margin: 0 auto;
@@ -25,18 +25,18 @@ h2, h1 {
   color: #353434;
 }
 
-.pricingPlan .container .cardsPricing .cardPricing .cardPricingBtn button, .featuredJobs .viewMore .show-all, .featuredJobs .cardsJobs .cardsjob-container .cardsJob .cardJobBtns button, .featuredJobs .cardsJobs .cardsjob-container .cardsJob .cardjob:hover button, .banner .container .main-content .btnAndLink .btn {
+.pricing-plan .container .cards-pricing .card-pricing .card-pricing-btn button, .featured-jobs .view-more .show-all, .featured-jobs .cards-jobs .cards-job-container .cards-job .card-job-btns button, .featured-jobs .cards-jobs .cards-job-container .cards-job .card-job:hover button, .banner .container .main-content .btn-and-link .btn {
   color: #fff;
   background-color: #544cac;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.pricingPlan .container .cardsPricing .cardPricing .cardPricingBtn button:hover, .featuredJobs .viewMore .show-all:hover, .featuredJobs .cardsJobs .cardsjob-container .cardsJob .cardJobBtns button:hover, .featuredJobs .cardsJobs .cardsjob-container .cardsJob .cardjob:hover button:hover, .banner .container .main-content .btnAndLink .btn:hover {
+.pricing-plan .container .cards-pricing .card-pricing .card-pricing-btn button:hover, .featured-jobs .view-more .show-all:hover, .featured-jobs .cards-jobs .cards-job-container .cards-job .card-job-btns button:hover, .featured-jobs .cards-jobs .cards-job-container .cards-job .card-job:hover button:hover, .banner .container .main-content .btn-and-link .btn:hover {
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.ourCustomer .container .contentCustomer .customerInfo .customerArowsAndViewers .arrows .arrow, .featuredJobs .cardsJobs .arrows .arrow {
+.our-customer .container .content-customer .customer-info .customer-arrows-viewers .arrows .arrow, .featured-jobs .cards-jobs .arrows .arrow {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,16 +48,16 @@ h2, h1 {
   outline: none;
   transition: all 0.3s ease;
 }
-.ourCustomer .container .contentCustomer .customerInfo .customerArowsAndViewers .arrows .arrow svg path, .featuredJobs .cardsJobs .arrows .arrow svg path {
+.our-customer .container .content-customer .customer-info .customer-arrows-viewers .arrows .arrow svg path, .featured-jobs .cards-jobs .arrows .arrow svg path {
   fill: #ef6010;
 }
-.ourCustomer .container .contentCustomer .customerInfo .customerArowsAndViewers .arrows .arrow:last-child, .featuredJobs .cardsJobs .arrows .arrow:last-child {
+.our-customer .container .content-customer .customer-info .customer-arrows-viewers .arrows .arrow:last-child, .featured-jobs .cards-jobs .arrows .arrow:last-child {
   transform: rotate(180deg);
 }
-.ourCustomer .container .contentCustomer .customerInfo .customerArowsAndViewers .arrows .arrow:hover, .featuredJobs .cardsJobs .arrows .arrow:hover {
+.our-customer .container .content-customer .customer-info .customer-arrows-viewers .arrows .arrow:hover, .featured-jobs .cards-jobs .arrows .arrow:hover {
   background-color: #ef6010;
 }
-.ourCustomer .container .contentCustomer .customerInfo .customerArowsAndViewers .arrows .arrow:hover svg path, .featuredJobs .cardsJobs .arrows .arrow:hover svg path {
+.our-customer .container .content-customer .customer-info .customer-arrows-viewers .arrows .arrow:hover svg path, .featured-jobs .cards-jobs .arrows .arrow:hover svg path {
   fill: #fff;
 }
 
@@ -115,6 +115,11 @@ li {
   list-style: none;
 }
 
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 header {
   background-color: #f5f7ff;
   padding-top: 23px;
@@ -131,7 +136,9 @@ header .header-icon {
   height: 30px;
   display: none;
 }
-header .logo svg {
+header .logo img {
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   max-height: 46px;
 }
@@ -217,16 +224,16 @@ header .auth-buttons a:hover {
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
-.banner .container .main-content .btnAndLink {
+.banner .container .main-content .btn-and-link {
   display: flex;
   align-items: center;
   gap: 2.125rem;
 }
-.banner .container .main-content .btnAndLink .btn {
+.banner .container .main-content .btn-and-link .btn {
   padding: 0.75rem 1.375rem;
   border-radius: 6px;
 }
-.banner .container .main-content .btnAndLink a {
+.banner .container .main-content .btn-and-link a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -234,7 +241,7 @@ header .auth-buttons a:hover {
   color: #000000;
   transition: all 0.3s ease;
 }
-.banner .container .main-content .btnAndLink a:hover {
+.banner .container .main-content .btn-and-link a:hover {
   color: #ff5c00;
 }
 .banner .container .banner-img img {
@@ -252,59 +259,59 @@ header .auth-buttons a:hover {
   gap: 2rem;
 }
 
-.howItWorks .container {
+.how-it-works .container {
   align-items: flex-end;
 }
-.howItWorks .container .content {
+.how-it-works .container .content {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   max-width: 435px;
   width: 100%;
 }
-.howItWorks .container .content h2 {
+.how-it-works .container .content h2 {
   padding-bottom: 0.75rem;
 }
-.howItWorks .container .content input[type=checkbox] {
+.how-it-works .container .content input[type=checkbox] {
   display: none;
 }
-.howItWorks .container .content input[type=checkbox]#more_about_profile:checked ~ .profile label span svg {
+.how-it-works .container .content input[type=checkbox]#more_about_profile:checked ~ .profile label span img {
   transform: rotate(180deg);
 }
-.howItWorks .container .content input[type=checkbox]#more_about_vacancies:checked ~ .vacancies label span svg {
+.how-it-works .container .content input[type=checkbox]#more_about_vacancies:checked ~ .vacancies label span img {
   transform: rotate(180deg);
 }
-.howItWorks .container .content input[type=checkbox]#more_about_job:checked ~ .job label span svg {
+.how-it-works .container .content input[type=checkbox]#more_about_job:checked ~ .job label span img {
   transform: rotate(180deg);
 }
-.howItWorks .container .content input[type=checkbox]:not(:checked) + .profile,
-.howItWorks .container .content .vacancies,
-.howItWorks .container .content .job {
+.how-it-works .container .content input[type=checkbox]:not(:checked) + .profile,
+.how-it-works .container .content .vacancies,
+.how-it-works .container .content .job {
   height: 58px;
 }
-.howItWorks .container .content input[type=checkbox]:checked + .profile {
+.how-it-works .container .content input[type=checkbox]:checked + .profile {
   height: 247px;
 }
-.howItWorks .container .content input[type=checkbox]:checked + .vacancies {
+.how-it-works .container .content input[type=checkbox]:checked + .vacancies {
   height: 175px;
 }
-.howItWorks .container .content input[type=checkbox]:checked + .job {
+.how-it-works .container .content input[type=checkbox]:checked + .job {
   height: 247px;
 }
-.howItWorks .container .content div {
+.how-it-works .container .content div {
   background-color: #f5f7ff;
   border-radius: 8px;
   transition: all 0.3s ease;
   overflow: hidden;
 }
-.howItWorks .container .content div label {
+.how-it-works .container .content div label {
   display: flex;
   align-items: center;
   position: relative;
   height: 58px;
   padding: 0.75rem;
 }
-.howItWorks .container .content div label .num {
+.how-it-works .container .content div label .num {
   width: 30px;
   height: 30px;
   display: flex;
@@ -315,26 +322,26 @@ header .auth-buttons a:hover {
   background-color: #f3e0ff;
   border-radius: 8px;
 }
-.howItWorks .container .content div label span {
+.how-it-works .container .content div label span {
   position: absolute;
   top: 1rem;
   right: 1.5rem;
 }
-.howItWorks .container .content div label span:hover {
+.how-it-works .container .content div label span:hover {
   cursor: pointer;
 }
-.howItWorks .container .content div label span svg {
+.how-it-works .container .content div label span img {
   transition: all 0.3s ease;
 }
-.howItWorks .container .content div p {
+.how-it-works .container .content div p {
   padding: 0.2rem 0.25rem 1.25rem 3.75rem;
 }
-.howItWorks .container .video {
+.how-it-works .container .video {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
 }
-.howItWorks .container .video iframe {
+.how-it-works .container .video iframe {
   max-width: 100%;
   max-height: 100%;
   width: 635px;
@@ -343,25 +350,25 @@ header .auth-buttons a:hover {
   border-radius: 20px;
 }
 
-.whyChooseUs .container {
+.why-choose-us .container {
   padding: 7.5rem 0;
   justify-content: center;
   flex-direction: column;
 }
-.whyChooseUs .container .titleWhyUs {
+.why-choose-us .container .title-why-us {
   text-align: center;
   max-width: 543px;
   width: 100%;
 }
-.whyChooseUs .container .titleWhyUs p {
+.why-choose-us .container .title-why-us p {
   padding-top: 1.25rem;
   padding-bottom: 2.7rem;
 }
-.whyChooseUs .container .cardsWhyUs {
+.why-choose-us .container .cards-why-us {
   display: flex;
   gap: 1.875rem;
 }
-.whyChooseUs .container .cardsWhyUs .card-1 {
+.why-choose-us .container .cards-why-us .card-1 {
   width: 100%;
   height: 254px;
   max-width: 350px;
@@ -371,10 +378,10 @@ header .auth-buttons a:hover {
   transition: all 0.3s ease;
   padding: 2.25rem;
 }
-.whyChooseUs .container .cardsWhyUs .card-1:hover {
+.why-choose-us .container .cards-why-us .card-1:hover {
   box-shadow: 0px 12px 30px 0px rgba(71, 71, 71, 0.15);
 }
-.whyChooseUs .container .cardsWhyUs .card-1 .card-icon {
+.why-choose-us .container .cards-why-us .card-1 .card-icon {
   max-width: 60px;
   max-height: 60px;
   height: 100%;
@@ -387,11 +394,11 @@ header .auth-buttons a:hover {
   border-radius: 7px;
   background-color: #6156dc;
 }
-.whyChooseUs .container .cardsWhyUs .card-1 h3 {
+.why-choose-us .container .cards-why-us .card-1 h3 {
   padding-top: 1.375rem;
   padding-bottom: 1rem;
 }
-.whyChooseUs .container .cardsWhyUs .card-2 {
+.why-choose-us .container .cards-why-us .card-2 {
   width: 100%;
   height: 254px;
   max-width: 350px;
@@ -401,10 +408,10 @@ header .auth-buttons a:hover {
   transition: all 0.3s ease;
   padding: 2.25rem;
 }
-.whyChooseUs .container .cardsWhyUs .card-2:hover {
+.why-choose-us .container .cards-why-us .card-2:hover {
   box-shadow: 0px 12px 30px 0px rgba(71, 71, 71, 0.15);
 }
-.whyChooseUs .container .cardsWhyUs .card-2 .card-icon {
+.why-choose-us .container .cards-why-us .card-2 .card-icon {
   max-width: 60px;
   max-height: 60px;
   height: 100%;
@@ -417,11 +424,11 @@ header .auth-buttons a:hover {
   border-radius: 7px;
   background-color: #ef6010;
 }
-.whyChooseUs .container .cardsWhyUs .card-2 h3 {
+.why-choose-us .container .cards-why-us .card-2 h3 {
   padding-top: 1.375rem;
   padding-bottom: 1rem;
 }
-.whyChooseUs .container .cardsWhyUs .card-3 {
+.why-choose-us .container .cards-why-us .card-3 {
   width: 100%;
   height: 254px;
   max-width: 350px;
@@ -431,10 +438,10 @@ header .auth-buttons a:hover {
   transition: all 0.3s ease;
   padding: 2.25rem;
 }
-.whyChooseUs .container .cardsWhyUs .card-3:hover {
+.why-choose-us .container .cards-why-us .card-3:hover {
   box-shadow: 0px 12px 30px 0px rgba(71, 71, 71, 0.15);
 }
-.whyChooseUs .container .cardsWhyUs .card-3 .card-icon {
+.why-choose-us .container .cards-why-us .card-3 .card-icon {
   max-width: 60px;
   max-height: 60px;
   height: 100%;
@@ -447,54 +454,54 @@ header .auth-buttons a:hover {
   border-radius: 7px;
   background-color: #a73eed;
 }
-.whyChooseUs .container .cardsWhyUs .card-3 h3 {
+.why-choose-us .container .cards-why-us .card-3 h3 {
   padding-top: 1.375rem;
   padding-bottom: 1rem;
 }
 
-.featuredJobs {
+.featured-jobs {
   overflow-x: hidden;
 }
-.featuredJobs .container {
+.featured-jobs .container {
   margin: 0 auto;
   text-align: center;
   max-width: 543px;
   width: 100%;
 }
-.featuredJobs .container p {
+.featured-jobs .container p {
   padding-top: 1.25rem;
 }
-.featuredJobs .cardsJobs {
+.featured-jobs .cards-jobs {
   display: flex;
   align-items: center;
   justify-content: start;
   gap: 3.2rem;
 }
-.featuredJobs .cardsJobs .arrows {
+.featured-jobs .cards-jobs .arrows {
   display: flex;
   align-items: center;
   gap: 1.25rem;
   padding-left: 2rem;
   cursor: pointer;
 }
-.featuredJobs .cardsJobs .arrows .disabled {
+.featured-jobs .cards-jobs .arrows .disabled {
   opacity: 0.5;
   pointer-events: none;
 }
-.featuredJobs .cardsJobs .cardsjob-container {
+.featured-jobs .cards-jobs .cards-job-container {
   padding-top: 5rem;
   overflow-x: hidden;
   width: 100%;
 }
-.featuredJobs .cardsJobs .cardsjob-container .wrap {
+.featured-jobs .cards-jobs .cards-job-container .wrap {
   flex-wrap: wrap;
 }
-.featuredJobs .cardsJobs .cardsjob-container .cardsJob {
+.featured-jobs .cards-jobs .cards-job-container .cards-job {
   display: flex;
   gap: 4rem;
   transition: transform 0.5s ease;
 }
-.featuredJobs .cardsJobs .cardsjob-container .cardsJob .cardjob {
+.featured-jobs .cards-jobs .cards-job-container .cards-job .card-job {
   width: 100%;
   height: 465px;
   max-width: 380px;
@@ -509,22 +516,23 @@ header .auth-buttons a:hover {
   position: relative;
   transition: all 0.3s ease;
 }
-.featuredJobs .cardsJobs .cardsjob-container .cardsJob .cardjob:hover {
+.featured-jobs .cards-jobs .cards-job-container .cards-job .card-job:hover {
   box-shadow: 0px 12px 30px 0px rgba(71, 71, 71, 0.15);
 }
-.featuredJobs .cardsJobs .cardsjob-container .cardsJob .cardjob:hover {
+.featured-jobs .cards-jobs .cards-job-container .cards-job .card-job:hover {
   transform: translateY(-35px);
 }
-.featuredJobs .cardsJobs .cardsjob-container .cardsJob .cardjob > span {
+.featured-jobs .cards-jobs .cards-job-container .cards-job .card-job > span {
   position: absolute;
   top: 2rem;
   right: 2rem;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
-.featuredJobs .cardsJobs .cardsjob-container .cardsJob .cardjob > span:hover {
+.featured-jobs .cards-jobs .cards-job-container .cards-job .card-job > span:hover {
   transform: scale(1.1);
 }
-.featuredJobs .cardsJobs .cardsjob-container .cardsJob .cardjob .cardjob-icon {
+.featured-jobs .cards-jobs .cards-job-container .cards-job .card-job .card-job-icon {
   width: 83px;
   height: 83px;
   margin-top: 3rem;
@@ -534,50 +542,50 @@ header .auth-buttons a:hover {
   justify-content: center;
   border-radius: 50%;
 }
-.featuredJobs .cardsJobs .cardsjob-container .cardsJob .cardjob .cardjob-icon img {
+.featured-jobs .cards-jobs .cards-job-container .cards-job .card-job .card-job-icon img {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
 }
-.featuredJobs .cardsJobs .cardsjob-container .cardsJob .cardjob h5 {
+.featured-jobs .cards-jobs .cards-job-container .cards-job .card-job h5 {
   padding-top: 1.75rem;
 }
-.featuredJobs .cardsJobs .cardsjob-container .cardsJob .cardjob > p {
+.featured-jobs .cards-jobs .cards-job-container .cards-job .card-job > p {
   color: #4238af;
   padding-bottom: 2.75rem;
 }
-.featuredJobs .cardsJobs .cardsjob-container .cardsJob .salaryAndLocation {
+.featured-jobs .cards-jobs .cards-job-container .cards-job .salary-and-location {
   display: flex;
   flex-direction: column;
   gap: 0.875rem;
 }
-.featuredJobs .cardsJobs .cardsjob-container .cardsJob .salaryAndLocation .salary,
-.featuredJobs .cardsJobs .cardsjob-container .cardsJob .salaryAndLocation .location {
+.featured-jobs .cards-jobs .cards-job-container .cards-job .salary-and-location .salary,
+.featured-jobs .cards-jobs .cards-job-container .cards-job .salary-and-location .location {
   display: flex;
   align-items: center;
   gap: 0.625rem;
 }
-.featuredJobs .cardsJobs .cardsjob-container .cardsJob .salaryAndLocation .salary > span,
-.featuredJobs .cardsJobs .cardsjob-container .cardsJob .salaryAndLocation .location > span {
+.featured-jobs .cards-jobs .cards-job-container .cards-job .salary-and-location .salary > span,
+.featured-jobs .cards-jobs .cards-job-container .cards-job .salary-and-location .location > span {
   display: flex;
   align-items: center;
 }
-.featuredJobs .cardsJobs .cardsjob-container .cardsJob .salaryAndLocation .salary p,
-.featuredJobs .cardsJobs .cardsjob-container .cardsJob .salaryAndLocation .location p {
+.featured-jobs .cards-jobs .cards-job-container .cards-job .salary-and-location .salary p,
+.featured-jobs .cards-jobs .cards-job-container .cards-job .salary-and-location .location p {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.featuredJobs .cardsJobs .cardsjob-container .cardsJob .salaryAndLocation .salary p span,
-.featuredJobs .cardsJobs .cardsjob-container .cardsJob .salaryAndLocation .location p span {
+.featured-jobs .cards-jobs .cards-job-container .cards-job .salary-and-location .salary p span,
+.featured-jobs .cards-jobs .cards-job-container .cards-job .salary-and-location .location p span {
   color: #323232;
 }
-.featuredJobs .cardsJobs .cardsjob-container .cardsJob .cardJobBtns {
+.featured-jobs .cards-jobs .cards-job-container .cards-job .card-job-btns {
   display: flex;
   gap: 1.75rem;
   padding-top: 2rem;
 }
-.featuredJobs .cardsJobs .cardsjob-container .cardsJob .cardJobBtns .heart {
+.featured-jobs .cards-jobs .cards-job-container .cards-job .card-job-btns .heart {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -588,53 +596,53 @@ header .auth-buttons a:hover {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.featuredJobs .cardsJobs .cardsjob-container .cardsJob .cardJobBtns .heart:hover {
+.featured-jobs .cards-jobs .cards-job-container .cards-job .card-job-btns .heart:hover {
   background-color: #ff5c00;
 }
-.featuredJobs .cardsJobs .cardsjob-container .cardsJob .cardJobBtns .heart:hover svg {
+.featured-jobs .cards-jobs .cards-job-container .cards-job .card-job-btns .heart:hover svg {
   margin-top: 0.3rem;
   margin-left: 0.1rem;
 }
-.featuredJobs .cardsJobs .cardsjob-container .cardsJob .cardJobBtns .heart:hover svg path {
+.featured-jobs .cards-jobs .cards-job-container .cards-job .card-job-btns .heart:hover svg path {
   fill: #ffffff;
 }
-.featuredJobs .cardsJobs .cardsjob-container .cardsJob .cardJobBtns button {
+.featured-jobs .cards-jobs .cards-job-container .cards-job .card-job-btns button {
   background: rgba(56, 49, 139, 0.3294117647);
   padding: 0.875rem 2.125rem;
   border-radius: 47px;
 }
-.featuredJobs .viewMore {
+.featured-jobs .view-more {
   display: flex;
   justify-content: center;
   padding-top: 4.75rem;
 }
-.featuredJobs .viewMore .show-all {
+.featured-jobs .view-more .show-all {
   padding: 0.875rem 2.125rem;
   border-radius: 47px;
 }
 
-.ourCustomer {
+.our-customer {
   padding-top: 7.5rem;
 }
-.ourCustomer .container {
+.our-customer .container {
   flex-direction: column;
 }
-.ourCustomer .container .titleCustomer {
+.our-customer .container .title-customer {
   margin: 0 auto;
   text-align: center;
   max-width: 543px;
   width: 100%;
 }
-.ourCustomer .container .titleCustomer p {
+.our-customer .container .title-customer p {
   padding-top: 1.25rem;
   padding-bottom: 2.8rem;
 }
-.ourCustomer .container .contentCustomer {
+.our-customer .container .content-customer {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.ourCustomer .container .contentCustomer .iconCustomer {
+.our-customer .container .content-customer .icon-customer {
   max-width: 350px;
   width: 100%;
   max-height: 350px;
@@ -643,7 +651,7 @@ header .auth-buttons a:hover {
   background-size: auto, auto, cover;
   background-repeat: no-repeat, no-repeat, no-repeat;
 }
-.ourCustomer .container .contentCustomer .iconCustomer img {
+.our-customer .container .content-customer .icon-customer img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
@@ -651,46 +659,46 @@ header .auth-buttons a:hover {
   border-bottom-left-radius: 170px;
   border-bottom-right-radius: 170px;
 }
-.ourCustomer .container .contentCustomer .customerInfo {
+.our-customer .container .content-customer .customer-info {
   max-width: 731px;
   width: 100%;
 }
-.ourCustomer .container .contentCustomer .customerInfo > h3 {
+.our-customer .container .content-customer .customer-info > h3 {
   padding-top: 1.5rem;
 }
-.ourCustomer .container .contentCustomer .customerInfo > p:first-of-type {
+.our-customer .container .content-customer .customer-info > p:first-of-type {
   text-transform: uppercase;
   padding-bottom: 0.5rem;
 }
-.ourCustomer .container .contentCustomer .customerInfo p:last-of-type {
+.our-customer .container .content-customer .customer-info p:last-of-type {
   color: #383838;
 }
-.ourCustomer .container .contentCustomer .customerInfo .customerRaiting {
+.our-customer .container .content-customer .customer-info .customer-raiting {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 0.625rem;
 }
-.ourCustomer .container .contentCustomer .customerInfo .customerArowsAndViewers {
+.our-customer .container .content-customer .customer-info .customer-arrows-viewers {
   padding-top: 2.4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.ourCustomer .container .contentCustomer .customerInfo .customerArowsAndViewers .arrows {
+.our-customer .container .content-customer .customer-info .customer-arrows-viewers .arrows {
   display: flex;
   align-items: center;
   gap: 0.9rem;
 }
-.ourCustomer .container .contentCustomer .customerInfo .customerArowsAndViewers .arrows .arrow {
+.our-customer .container .content-customer .customer-info .customer-arrows-viewers .arrows .arrow {
   max-width: 41px;
   max-height: 41px;
 }
-.ourCustomer .container .contentCustomer .customerInfo .customerArowsAndViewers .customerViewers {
+.our-customer .container .content-customer .customer-info .customer-arrows-viewers .customer-viewers {
   display: flex;
   align-items: center;
 }
-.ourCustomer .container .contentCustomer .customerInfo .customerArowsAndViewers .customerViewers div {
+.our-customer .container .content-customer .customer-info .customer-arrows-viewers .customer-viewers div {
   width: 53px;
   height: 53px;
   background: #ef6010;
@@ -699,26 +707,26 @@ header .auth-buttons a:hover {
   justify-content: center;
   border-radius: 50%;
 }
-.ourCustomer .container .contentCustomer .customerInfo .customerArowsAndViewers .customerViewers div img {
+.our-customer .container .content-customer .customer-info .customer-arrows-viewers .customer-viewers div img {
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.ourCustomer .container .contentCustomer .customerInfo .customerArowsAndViewers .customerViewers div:nth-of-type(1) {
+.our-customer .container .content-customer .customer-info .customer-arrows-viewers .customer-viewers div:nth-of-type(1) {
   transform: translateX(150%);
 }
-.ourCustomer .container .contentCustomer .customerInfo .customerArowsAndViewers .customerViewers div:nth-of-type(2) {
+.our-customer .container .content-customer .customer-info .customer-arrows-viewers .customer-viewers div:nth-of-type(2) {
   transform: translateX(100%);
 }
-.ourCustomer .container .contentCustomer .customerInfo .customerArowsAndViewers .customerViewers div:nth-of-type(2) img {
+.our-customer .container .content-customer .customer-info .customer-arrows-viewers .customer-viewers div:nth-of-type(2) img {
   width: 80%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.ourCustomer .container .contentCustomer .customerInfo .customerArowsAndViewers .customerViewers div:nth-of-type(3) {
+.our-customer .container .content-customer .customer-info .customer-arrows-viewers .customer-viewers div:nth-of-type(3) {
   transform: translateX(50%);
 }
-.ourCustomer .container .contentCustomer .customerInfo .customerArowsAndViewers .customerViewers div:nth-of-type(4) {
+.our-customer .container .content-customer .customer-info .customer-arrows-viewers .customer-viewers div:nth-of-type(4) {
   transform: translateX(0%);
 }
 
@@ -744,28 +752,28 @@ header .auth-buttons a:hover {
   color: #fff;
 }
 
-.pricingPlan {
+.pricing-plan {
   padding-top: 7rem;
 }
-.pricingPlan .container {
+.pricing-plan .container {
   flex-direction: column;
 }
-.pricingPlan .container .titlePricing {
+.pricing-plan .container .title-pricing {
   margin: 0 auto;
   text-align: center;
   max-width: 543px;
   width: 100%;
 }
-.pricingPlan .container .titlePricing p {
+.pricing-plan .container .title-pricing p {
   padding-top: 1rem;
 }
-.pricingPlan .container .cardsPricing {
+.pricing-plan .container .cards-pricing {
   padding-top: 4.7rem;
   display: flex;
   gap: 1.875rem;
   transition: transform 0.3s ease;
 }
-.pricingPlan .container .cardsPricing .cardPricing {
+.pricing-plan .container .cards-pricing .card-pricing {
   width: 100%;
   height: 537px;
   max-width: 350px;
@@ -780,42 +788,42 @@ header .auth-buttons a:hover {
   transition: all 0.3s ease;
   padding: 4rem;
 }
-.pricingPlan .container .cardsPricing .cardPricing:hover {
+.pricing-plan .container .cards-pricing .card-pricing:hover {
   box-shadow: 0px 12px 30px 0px rgba(71, 71, 71, 0.15);
 }
-.pricingPlan .container .cardsPricing .cardPricing > h3 {
+.pricing-plan .container .cards-pricing .card-pricing > h3 {
   color: #4238af;
   text-transform: uppercase;
 }
-.pricingPlan .container .cardsPricing .cardPricing > h2 {
+.pricing-plan .container .cards-pricing .card-pricing > h2 {
   font-size: 45px;
   line-height: 55px;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-.pricingPlan .container .cardsPricing .cardPricing:hover {
+.pricing-plan .container .cards-pricing .card-pricing:hover {
   transform: translateY(-30px);
 }
-.pricingPlan .container .cardsPricing .cardPricing:hover .cardPricingBtn button {
+.pricing-plan .container .cards-pricing .card-pricing:hover .card-pricing-btn button {
   background-color: #544cac;
 }
-.pricingPlan .container .cardsPricing .cardPricing .priceDescription {
+.pricing-plan .container .cards-pricing .card-pricing .price-description {
   padding-top: 4rem;
   padding-bottom: 2.75rem;
   display: flex;
   flex-direction: column;
   gap: 1.4rem;
 }
-.pricingPlan .container .cardsPricing .cardPricing .priceDescription div {
+.pricing-plan .container .cards-pricing .card-pricing .price-description div {
   display: flex;
   align-items: center;
   gap: 0.675rem;
 }
-.pricingPlan .container .cardsPricing .cardPricing .priceDescription div span {
+.pricing-plan .container .cards-pricing .card-pricing .price-description div span {
   display: flex;
   align-items: center;
 }
-.pricingPlan .container .cardsPricing .cardPricing .cardPricingBtn button {
+.pricing-plan .container .cards-pricing .card-pricing .card-pricing-btn button {
   background: rgba(56, 49, 139, 0.3294117647);
   padding: 0.875rem 2.125rem;
   border-radius: 47px;
@@ -832,33 +840,33 @@ footer .container {
   flex-direction: column;
   padding: 0 0.5rem;
 }
-footer .container .footerMenus {
+footer .container .footer-menus {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-footer .container .footerMenus .footerMenu > h3 {
+footer .container .footer-menus .footer-menu > h3 {
   font-family: "Oswald", sans-serif;
   font-size: 24px;
   line-height: 26px;
   font-weight: 400;
   padding-bottom: 1rem;
 }
-footer .container .footerMenus .footerMenu ul {
+footer .container .footer-menus .footer-menu ul {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
 }
-footer .container .footerMenus .footerMenu ul li {
+footer .container .footer-menus .footer-menu ul li {
   transition: all 0.3s ease;
 }
-footer .container .footerMenus .footerMenu ul li:hover {
+footer .container .footer-menus .footer-menu ul li:hover {
   transform: scale(1.1);
 }
-footer .container .footerMenus .footerMenu ul li a {
+footer .container .footer-menus .footer-menu ul li a {
   color: #717171;
 }
-footer .container .LogoAndNavigation {
+footer .container .logo-navigation {
   margin-top: 5.625rem;
   padding-top: 0.875rem;
   padding-bottom: 0.875rem;
@@ -868,50 +876,50 @@ footer .container .LogoAndNavigation {
   align-items: center;
   width: 100%;
 }
-footer .container .LogoAndNavigation .footerLogo {
+footer .container .logo-navigation .footer-logo {
   display: flex;
 }
-footer .container .LogoAndNavigation .footerBottomMenu ul {
+footer .container .logo-navigation .footer-bottom-menu ul {
   display: flex;
   gap: 4rem;
 }
-footer .container .LogoAndNavigation .footerBottomMenu ul li {
+footer .container .logo-navigation .footer-bottom-menu ul li {
   transition: all 0.3s ease;
 }
-footer .container .LogoAndNavigation .footerBottomMenu ul li:hover {
+footer .container .logo-navigation .footer-bottom-menu ul li:hover {
   transform: scale(1.1);
 }
-footer .container .LogoAndNavigation .footerBottomMenu ul li a {
+footer .container .logo-navigation .footer-bottom-menu ul li a {
   font-weight: 600;
   font-size: 14px;
   line-height: 26px;
   color: #3a2e5c;
 }
-footer .container .LogoAndNavigation .socialLinks {
+footer .container .logo-navigation .social-links {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
-footer .container .LogoAndNavigation .socialLinks div {
+footer .container .logo-navigation .social-links div {
   width: 28px;
   height: 28px;
   border-radius: 50%;
   background-color: #fff;
 }
-footer .container .LogoAndNavigation .socialLinks div:hover {
+footer .container .logo-navigation .social-links div:hover {
   background-color: rgba(66, 56, 175, 0.8117647059);
 }
-footer .container .LogoAndNavigation .socialLinks div:hover a span path {
+footer .container .logo-navigation .social-links div:hover a span path {
   fill: #fff;
 }
-footer .container .LogoAndNavigation .socialLinks div a {
+footer .container .logo-navigation .social-links div a {
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-footer .container .LogoAndNavigation .socialLinks div a span path {
+footer .container .logo-navigation .social-links div a span path {
   fill: #979797;
 }
 
@@ -941,41 +949,41 @@ footer .container .LogoAndNavigation .socialLinks div a span path {
   .close-icon {
     display: block;
   }
-  .featuredJobs .cardsJobs {
+  .featured-jobs .cards-jobs {
     flex-direction: column-reverse;
   }
-  .featuredJobs .cardsJobs .arrows {
+  .featured-jobs .cards-jobs .arrows {
     padding-left: 0;
   }
-  .featuredJobs .cardsJobs .cardsjob-container .cardsJob.wrap {
+  .featured-jobs .cards-jobs .cards-job-container .cards-job.wrap {
     justify-content: center;
   }
-  .featuredJobs .cardsJobs .cardsjob-container .cardsJob {
+  .featured-jobs .cards-jobs .cards-job-container .cards-job {
     margin: 0 1rem;
     gap: 2rem;
   }
-  .featuredJobs .cardsJobs .cardsjob-container .cardsJob .cardjob {
+  .featured-jobs .cards-jobs .cards-job-container .cards-job .card-job {
     width: 100%;
     min-width: 280px;
     max-width: 280px;
   }
-  .ourCustomer .container {
+  .our-customer .container {
     padding: 0 1rem;
   }
-  .ourCustomer .container .contentCustomer {
+  .our-customer .container .content-customer {
     gap: 1rem;
   }
-  .pricingPlan {
+  .pricing-plan {
     padding: 7rem 1rem;
   }
-  .pricingPlan .container .cardsPricing {
+  .pricing-plan .container .cards-pricing {
     flex-wrap: wrap;
     justify-content: space-around;
   }
   footer .container {
     padding: 0 1rem;
   }
-  footer .container .LogoAndNavigation .footerBottomMenu ul {
+  footer .container .logo-navigation .footer-bottom-menu ul {
     gap: 2rem;
   }
 }
@@ -1003,25 +1011,25 @@ footer .container .LogoAndNavigation .socialLinks div a span path {
     justify-content: center;
     gap: 5rem;
   }
-  .howItWorks .container {
+  .how-it-works .container {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
     padding: 1rem;
   }
-  .howItWorks .container .content {
+  .how-it-works .container .content {
     max-width: 100%;
   }
-  .whyChooseUs .container .cardsWhyUs {
+  .why-choose-us .container .cards-why-us {
     flex-wrap: wrap;
     justify-content: center;
   }
-  footer .container .footerMenus {
+  footer .container .footer-menus {
     gap: 3rem;
     flex-wrap: wrap;
     justify-content: space-around;
   }
-  footer .container .LogoAndNavigation {
+  footer .container .logo-navigation {
     margin-top: 2rem;
   }
 }
@@ -1034,31 +1042,31 @@ footer .container .LogoAndNavigation .socialLinks div a span path {
        object-fit: cover;
     width: 100%;
   }
-  .howItWorks .container .content input[type=checkbox]:not(:checked) + .profile,
-  .howItWorks .container .content .vacancies,
-  .howItWorks .container .content .job {
+  .how-it-works .container .content input[type=checkbox]:not(:checked) + .profile,
+  .how-it-works .container .content .vacancies,
+  .how-it-works .container .content .job {
     max-height: 58px;
   }
-  .howItWorks .container .content input[type=checkbox]:checked + .profile {
+  .how-it-works .container .content input[type=checkbox]:checked + .profile {
     max-height: 500px;
     height: 100%;
   }
-  .howItWorks .container .content input[type=checkbox]:checked + .vacancies {
+  .how-it-works .container .content input[type=checkbox]:checked + .vacancies {
     max-height: 500px;
     height: 100%;
   }
-  .howItWorks .container .content input[type=checkbox]:checked + .job {
+  .how-it-works .container .content input[type=checkbox]:checked + .job {
     max-height: 500px;
     height: 100%;
   }
-  .ourCustomer .container .contentCustomer {
+  .our-customer .container .content-customer {
     flex-direction: column;
   }
-  footer .container .LogoAndNavigation {
+  footer .container .logo-navigation {
     flex-direction: column;
     gap: 2rem;
   }
-  footer .container .LogoAndNavigation .footerBottomMenu ul {
+  footer .container .logo-navigation .footer-bottom-menu ul {
     gap: 1rem;
   }
 }
@@ -1081,11 +1089,11 @@ footer .container .LogoAndNavigation .socialLinks div a span path {
     padding: 2rem;
     height: 100%;
   }
-  .pricingPlan .container .cardsPricing .cardPricing {
+  .pricing-plan .container .cards-pricing .card-pricing {
     padding: 2rem;
     min-width: 200px;
   }
-  footer .container .LogoAndNavigation .footerBottomMenu ul {
+  footer .container .logo-navigation .footer-bottom-menu ul {
     flex-direction: column;
   }
 }/*# sourceMappingURL=style.css.map */
